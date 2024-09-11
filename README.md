@@ -1,77 +1,68 @@
-Berikut adalah kode lengkap untuk file README.md yang diminta:
+Guide penggunaan
 
-markdown
-Copy code
 # Project Setup Guide
 
 ## Backend Setup
 
 1. Masuk ke direktori `backend`:
    ```bash
-   cd backend
-Install dependencies dengan perintah:
+   cd backend-test-psi
 
-bash
-Copy code
-npm i
-Kembali ke direktori sebelumnya:
+2. Install dependencies dengan perintah:
+   ```bash
+   npm i
 
-bash
-Copy code
-cd ..
-Masuk ke direktori frontend dan install dependencies:
+3. buat file .env dan masukkan:
+   ```bash
+   DATABASE_URL: //link database mysql
 
-bash
-Copy code
-cd frontend
-npm i
-Buat file .env di dalam direktori backend dengan key berikut:
+4. jalankan perintah:
+   ```bash
+   npx prisma migrate dev
+   npm run seed
+   
+5. jalankan api nest:
+   ```bash
+   npm run start:dev
 
-makefile
-Copy code
-DATABASE_URL=<your_mysql_database_url>
-Jalankan perintah berikut untuk migrasi database:
+6. Buka URL berikut di browser untuk menguji API:
+   ```arduino
+   http://localhost:3000/
 
-bash
-Copy code
-npx prisma migrate dev
-Untuk seeding data user dan company, jalankan perintah:
+ API sudah dilengkapi dengan dokumentasi menggunakan Swagger, sehingga kamu bisa mengakses dokumentasi di URL yang sama.
 
-bash
-Copy code
-npm run seed
-Backend Running Guide
-Untuk menjalankan aplikasi NestJS, masuk ke direktori backend dan jalankan perintah berikut:
-
-bash
-Copy code
-npm run start:dev
-Buka URL berikut di browser untuk menguji API:
-
-arduino
-Copy code
-http://localhost:3000/
-API sudah dilengkapi dengan dokumentasi menggunakan Swagger, sehingga kamu bisa mengakses dokumentasi di URL yang sama.
-
-API Testing
+## API Testing
 Nomor 1 dapat diuji di endpoint checkout.
+
 Nomor 2 dapat diuji di endpoint auth.
+
 Nomor 3 dapat diuji di endpoint user-company.
+
 Nomor 4 dapat diuji di endpoint user.
-Frontend Running Guide
-Masuk ke direktori frontend dan jalankan aplikasi dengan perintah:
-bash
-Copy code
-npm run dev
-Fundamental Test
+
+
+## Frontend Setup
+
+1. Masuk ke direktori `frontend`:
+   ```bash
+   cd frontend-test-psi
+
+2. Install dependencies dengan perintah:
+   ```bash
+   npm i
+   
+3. jalankan aplikasi react:
+   ```bash
+   npm run dev
+
+6. Buka URL berikut di browser untuk menguji aplikasi:
+   ```arduino
+   http://localhost:5173/
+
+
+## Fundamental Test
 Test manipulasi array ada di file fundamentalTest.js yang terletak di root directory.
 Kamu bisa menjalankan test tersebut dengan perintah berikut:
-bash
-Copy code
-node fundamentalTest.js
-yaml
-Copy code
+   ```bash
+      node fundamentalTest.js
 
----
-
-Salin kode di atas ke dalam file `README.md` di proyek GitHub Anda.
